@@ -59,6 +59,7 @@ public class TestImport2 {
 			Vegetables vg=new Vegetables();
 			
 			ps.insertProduct(vg);
+		System.out.println("yes   i love you")
 			
 		}
 		
