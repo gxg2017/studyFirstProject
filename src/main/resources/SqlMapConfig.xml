@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!--别名配置  -->
+	<typeAliases>
+		 <!-- 通过package, 可以直接指定package的名字， mybatis会自动扫描你指定包下面的javabean, 并且默认设置一个别名，默认的名字为： 
+            javabean 的首字母小写的非限定类名来作为它的别名 -->
+		<package name="com.offcn.pojo"/>
+	</typeAliases>
+	
+
+	<mappers>
+			<!--自动引入xxx包下的配置文件  -->
+		<package name="com.offcn.mappers"/>
+	</mappers>
+	
+</configuration>

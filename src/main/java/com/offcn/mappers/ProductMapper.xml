@@ -1,0 +1,17 @@
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace：命名空间 -->
+<mapper namespace="com.offcn.mappers.ProductMapper">
+	
+	
+	<insert id="insertProduct" parameterType="Vegetables">
+		<selectKey keyColumn="id" keyProperty="id" order="AFTER" resultType="int">
+			SELECT last_insert_id()
+		</selectKey>
+		insert into vegetables (name,mainprice,avgprice,maxprice,spec,unit,publishtime) values 
+		 (#{name},#{mainprice},#{avgprice},#{maxprice},#{spec},#{unit},#{publishtime})
+	</insert>
+	
+</mapper>
